@@ -8,6 +8,7 @@ This repository contains a Tic Tac Toe game implemented using React. The project
 
 - React
 - JavaScript
+- HTML
 - CSS
 
 ---
