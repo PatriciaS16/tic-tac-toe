@@ -27,6 +27,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05)
 }
 
 .svg {
@@ -36,11 +42,24 @@ body {
 
 .circle {
   stroke: #FF665C;
+  stroke-width: 10px;
   fill: white;
+  animation: scaleUp 0.3s ease-out forwards;
 }
 
 .cross {
-  stroke: #ec08be;
+  stroke: #006F6A;
+  stroke-width: 10px;
+  animation: scaleUp 0.3s ease-out forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .result {
@@ -59,7 +78,8 @@ body {
 }
 
 .button {
-  padding: 10px;
+  padding: 5px;
   font-size: 0.5em;
   border-radius: 10px;
+  cursor: pointer;
 }
